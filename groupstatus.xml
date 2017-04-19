@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_GROUPSTATUS</name>
+	<creationDate>19.04.2017</creationDate>
+	<author>spoln</author>
+	<authorEmail>your@email.com</authorEmail>
+	<authorUrl>http://your.url.com</authorUrl>
+	<copyright>A copyright</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLG_GROUPSTATUS_XML_DESCRIPTION</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile></scriptfile>
+
+	<!-- Language files -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_groupstatus.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_groupstatus.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_groupstatus.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_groupstatus.sys.ini</language>
+	</languages>
+
+	<!-- Plugin files -->
+	<files>
+		<filename plugin="groupstatus">groupstatus.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<!-- Config parameter -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="sample"
+					type="text"
+					default="42"
+					label="PLG_GROUPSTATUS_SAMPLE_LABEL"
+					description="PLG_GROUPSTATUS_SAMPLE_DESCRIPTION"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="groupstatus">https://www.example.com/plg_groupstatus.xml</server>
+	</updateservers>
+</extension>
